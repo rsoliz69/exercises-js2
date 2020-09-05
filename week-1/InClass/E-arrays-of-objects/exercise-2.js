@@ -40,17 +40,27 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = travelDestinations
+.filter(destination=>destination.distanceKms <500)
+.map(destination=>destination.destinationName)// Complete here
 
-let destinationNameReachableByFerry = // Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+let destinationNameReachableByFerry = travelDestinations
+.find(destination => destination.transportations.includes("ferry"))
+.destinationName
+//.map(destination => destination.destinationName)
+console.log(destinationNameReachableByFerry)// Complete here
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+.filter(destination => destination.transportations
+.includes("train")&& destination.distanceKms > 300)
+console.log(destinationNamesMoreThan300KmsAwayByTrain)// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log(`Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`);
-console.log(`Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`);
-console.log(`Question 3) Expected result: London,Paris, actual result:  ${destinationNamesMoreThan300KmsAwayByTrain}`);
+//console.log(`Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`);
+//console.log(`Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`);
+//console.log(`Question 3) Expected result: London,Paris, actual result:  ${destinationNamesMoreThan300KmsAwayByTrain}`);

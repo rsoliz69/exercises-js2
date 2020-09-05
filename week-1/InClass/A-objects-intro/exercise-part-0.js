@@ -10,4 +10,8 @@ let laptop = {
     brand: "Lenovo",
     screenSize: 13,
     isTouchscreen: true,
+    price: {
+      base: 500,
+      baseConIva: 605
+    }
   };

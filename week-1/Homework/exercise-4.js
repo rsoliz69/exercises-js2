@@ -54,20 +54,23 @@ let restaurant1 = {
   WRITE YOUR CODE BELOW
   */
   
-  let restaurantFinderApplication = {
-    applicationName: "Restaurant Finder",
-    applicationVersion: "1.0",
-    restaurants: restaurants,
-    findAvailableRestaurants: function (numberOfPeople) {
-      // Complete here
-    },
-    findRestaurantServingDish: function (dishName) {
-      // Complete here
-    },
-    countNumberOfRestaurantsInArea: function (area) {
-      // Complete here
-    },
-  };
+ let restaurantFinderApplication = {
+  applicationName: "Restaurant Finder",
+  applicationVersion: "1.0",
+  restaurants: restaurants,
+  findAvailableRestaurants: function (numberOfPeople) {
+    // Complete here
+    return restaurants.filter(element => element.totalSeats - element.numberOfCustomers >= numberOfPeople).map(el => el.name);
+  },
+  findRestaurantServingDish: function (dishName) {
+    // Complete here
+    return restaurants.filter(el => el.menu.includes(dishName)).map(el => el.name);
+  },
+  countNumberOfRestaurantsInArea: function (area) {
+    // Complete here
+    return restaurants.filter(el => el.address.area === area).length;
+  },
+};
   
   /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
