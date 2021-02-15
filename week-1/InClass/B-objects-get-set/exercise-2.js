@@ -1,6 +1,5 @@
 /*
     The following code contains syntax errors - try and fix them!
-
     Once you fix them, run this file, it should output the correct values!
 */
 
@@ -12,7 +11,7 @@ var phone = {
 };
 
 var phoneBrand = phone.brand;
-var phoneLaunchYear = phone.launchYear;
+var phoneLaunchYear = phone['launchYear'];
 
 // DO NOT MODIFY BELOW THIS LINE
 

@@ -1,6 +1,5 @@
 /*
 Given the following house - follow the instructions below.
-
 Make sure you run the file after and it outputs the correct results.
 */
 
@@ -12,15 +11,14 @@ let house = {
     lastName: "Conway",
   },
 };
-house.address = '51 Berkley Road'
-house.previousOwners= ["Brian M.", "Fiona S."]
-house.currentOwner.lastName= "Montgomery"
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
-
   WRITE YOUR CODE BELOW
 */
+house.address = '51 Berkley Road';
+house.previousOwners = ["Brian M.", "Fiona S."];
+house.currentOwner.lastName = "Montgomery";
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]

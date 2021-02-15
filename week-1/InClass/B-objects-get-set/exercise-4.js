@@ -2,14 +2,16 @@
     Write code in the space provided so that the expected values output
 */
 
+
 var dog = {
     name: 'Billy',
     wantsToPlay: false
 };
-dog.name = 'Rex'
-dog.wantsToPlay = true
 
 // WRITE CODE HERE
+
+dog.name = 'Rex';
+dog.wantsToPlay = true;
 
 
 //DO NOT MODIFY BELOW

@@ -3,15 +3,21 @@
 */
 
 // WRITE CODE HERE
-var kitten = {
-name: 'Francis',
-edad: 1
-
+let kitten = {
+    name: "Kira",
+    edad: 3,
+    furColour: "orange",
+    peso: 4,
+    size: 50,
+    procedencia: "Barcelona",
+    ubicacion: {
+        lon: 54.182,
+        lat: 7.320
+    }
 }
 
-kitten.name= 'Gilbert'
+kitten.name = "Gilbert";
 
 console.log(kitten.name);
-console.log(kitten)
 
 // -> it should output: "Gilbert"

@@ -1,11 +1,8 @@
 /* Challenge Famous Writers
 Did you know you can also have an array of objects? We've created one for you here. Loop through the array, 
 and for each object, `console.log()` out the sentence:
-
 "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
-
 Here is the array:
-
 */ 
 
 var writers = [
@@ -42,5 +39,19 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
-writers.filter(el => el.alive === true).forEach
-(el => console.log(`Hi, my name is ${el.firstName} ${el.lastName}. I am ${el.age} years old, and work as a ${el.occupation}.`));
+
+console.log("two loops");
+writers.filter(el => el.alive).forEach(el => console.log(`Hi, my name is ${el.firstName} ${el.lastName}. I am ${el.age} years old, and work as a ${el.occupation}.`));
+console.log("one loop");
+writers.forEach(writer => {
+  if (writer.alive){
+    console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`);
+  }
+});
+
+console.log("with destructuring method");
+writers.forEach(({alive, firstName, lastName, age, occupation}) => {
+  if (alive){
+    console.log(`Hi, my name is ${firstName} ${lastName}. I am ${age} years old, and work as a ${occupation}.`);
+  }
+});
